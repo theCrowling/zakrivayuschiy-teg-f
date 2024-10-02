@@ -166,13 +166,13 @@
 
 .card__box {
   position: relative;
+  border-bottom: var(--border);
 }
 
 .card__box-img {
   display: block;
   width: 100%;
   height: 100%;
-  border-bottom: var(--border);
   object-fit: cover;
   object-position: center;
   aspect-ratio: 1;
@@ -360,7 +360,7 @@
 }
 
 .explore {
-  filter: brightness(120%);
+  filter: blur(2px);
 }
 
 .point-one {
@@ -384,7 +384,7 @@
 }
 
 .breathtaking {
-  filter: blur(2px) contrast(120%);
+  filter: brightness(120%) contrast(120%);
 }
 
 /* save */
