@@ -10,11 +10,11 @@
   --bg-gradient-line: #000;
   --bg-gradient-top: #007f0c;
   --bg-gradient-bottom: #004306;
-  --accent-color: #00CC14;
+  --accent-color: #00cc14;
   --title-weight: 785;
   --text-weight: 465;
   --text-stroke: #000;
-  --button-hover: #00CC14;
+  --button-hover: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,11 +23,11 @@
     --bg-gradient-line: #000;
     --bg-gradient-top: #007f0c;
     --bg-gradient-bottom: #004306;
-    --accent-color: #00CC14;
+    --accent-color: #00cc14;
     --title-weight: 785;
     --text-weight: 465;
     --text-stroke: #000;
-    --button-hover: #00CC14;
+    --button-hover: #00cc14;
   }
 }
 

@@ -54,7 +54,7 @@
   width: clamp(375px, 75vi, 700px);
   height: min(368px, 87vi);
   margin: 100px auto;
-  border: 2px solid var(--accent-color);
+  border: var(--border);
   background-color: var(--bg-color);
 }
 
@@ -83,17 +83,17 @@
 }
 
 .theme-menu__button {
-  border: none;
-  background: none;
+  position: relative;
   display: block;
+  border: none;
   padding: 0;
   font-family: var(--accent-font);
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   text-transform: uppercase;
-  position: relative;
-  cursor: pointer;
+  background: none;
   transition: opacity 0.3s;
+  cursor: pointer;
 }
 
 .theme-menu__button:disabled {
@@ -149,7 +149,7 @@
 .card {
   width: clamp(375px, 75vi, 700px);
   height: min-content;
-  border: 2px solid var(--accent-color);
+  border: var(--border);
   background-color: var(--bg-color);
 }
 
@@ -158,10 +158,10 @@
 }
 
 .card__title {
-  font-size: 18px;
+  border-bottom: var(--border);
   padding: 4px 10px 5px;
-  border-bottom: 2px solid var(--accent-color);
   font-weight: var(--title-weight);
+  font-size: 18px;
 }
 
 .card__box {
@@ -172,22 +172,23 @@
   display: block;
   width: 100%;
   height: 100%;
+  border-bottom: var(--border);
   object-fit: cover;
   object-position: center;
-  border-bottom: 2px solid var(--accent-color);
+  aspect-ratio: 1;
 }
 
 .card__box-tag {
   position: absolute;
   top: 25px;
   right: 25px;
-  font-family: var(--accent-font);
-  font-size: 14px;
-  font-weight: 400;
-  mix-blend-mode: hard-light;
   opacity: 50%;
+  font-family: var(--accent-font);
+  font-weight: 400;
+  font-size: 14px;
   text-shadow: -1px 0 var(--text-stroke), 0 1px var(--text-stroke),
     1px 0 var(--text-stroke), 0 -1px var(--text-stroke);
+  mix-blend-mode: hard-light;
 }
 
 @media (width <= 400px) {
@@ -198,8 +199,8 @@
 
 @supports ((-webkit-text-stroke: 1px var(--text-stroke))) {
   .card__box-tag {
-    -webkit-text-stroke: 1px var(--text-stroke);
     text-shadow: none;
+    -webkit-text-stroke: 1px var(--text-stroke);
   }
 }
 
@@ -220,15 +221,15 @@
 /* heart icon */
 .card__icon-button {
   border: 2px solid transparent;
-  background: none;
   padding: 0;
-  cursor: pointer;
+  background: none;
   transition: border 0.3s;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
+  border: var(--border);
   outline: none;
-  border: 2px solid var(--accent-color);
 }
 
 .like-icon {
@@ -240,8 +241,8 @@
 }
 
 .like-icon .core {
-  transition: fill 0.3s linear;
   fill: var(--bg-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
@@ -254,8 +255,8 @@
 }
 
 .like-icon .main-body {
-  transition: fill 0.3s 0.05s linear;
   fill: var(--bg-color);
+  transition: fill 0.3s 0.05s linear;
 }
 
 .like-icon:hover .main-body {
@@ -268,28 +269,28 @@
 
 /* heart color */
 .like-icon.is-liked .core {
-  transition: fill 0.3s ease-in;
   fill: var(--heart);
+  transition: fill 0.3s ease-in;
 }
 
 .like-icon.is-liked .main-body {
-  transition: fill 0.3s 0.03s ease-in;
   fill: var(--heart);
+  transition: fill 0.3s 0.03s ease-in;
 }
 
 .like-icon .contour {
-  transition: fill 0.1s linear;
   fill: var(--accent-color);
+  transition: fill 0.1s linear;
 }
 
 .like-icon.is-liked .contour {
-  transition: fill 0.3s 0.06s ease-in;
   fill: var(--heart);
+  transition: fill 0.3s 0.06s ease-in;
 }
 
 .like-icon.is-liked .heart {
-  animation: pulse 0.3s 0.1s ease-in;
   transform-origin: center;
+  animation: pulse 0.3s 0.1s ease-in;
 }
 
 @keyframes pulse {
@@ -316,25 +317,25 @@
 
 /* Like button */
 .card__like-button {
-  border: 2px solid var(--accent-color);
-  background: none;
+  position: relative;
   width: 130px;
   height: 40px;
-  cursor: pointer;
+  border: var(--border);
+  background: none;
   transition: box-shadow 0.3s;
-  position: relative;
+  cursor: pointer;
 }
 
 .card__like-button:focus-visible {
-  outline: none;
   box-shadow: 2px 2px var(--accent-color);
+  outline: none;
 }
 
 .card__like-button::after {
   content: "";
-  background-color: var(--button-hover);
   position: absolute;
   inset: 0;
+  background-color: var(--button-hover);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -346,40 +347,74 @@
 }
 
 .button__text {
+  display: block;
   font-family: var(--accent-font);
   font-size: 14px;
   text-align: center;
-  display: block;
+}
+
+/* filters */
+
+.press-start {
+  filter: contrast(120%);
+}
+
+.explore {
+  filter: brightness(120%);
+}
+
+.point-one {
+ filter: sepia(30%);
+}
+
+.curiosity {
+ filter: opacity(80%);
+}
+
+.support {
+  filter: hue-rotate(50deg);
+}
+
+.plan-b {
+  filter: saturate(140%)
+}
+
+.ready-steady {
+  filter: invert(10%);
+}
+
+.breathtaking {
+  filter: blur(2px) contrast(120%);
 }
 
 /* save */
 
 .save-button {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  border: 2px solid var(--accent-color);
-  background: var(--bg-color);
-  padding: 0;
   width: 335px;
   height: 55px;
   margin: 50px auto 100px;
-  cursor: pointer;
+  border: var(--border);
+  padding: 0;
+  background: var(--bg-color);
   transition: box-shadow 0.3s;
-  position: relative;
+  cursor: pointer;
 }
 
 .save-button:focus-visible {
-  outline: none;
   box-shadow: 2px 2px var(--accent-color);
+  outline: none;
 }
 
 .save-button::after {
   content: "";
-  background-color: var(--button-hover);
   position: absolute;
   inset: 0;
+  background-color: var(--button-hover);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -401,9 +436,9 @@
 
 @media (width <= 400px) {
   .save-button {
+    flex-direction: column;
     width: 306px;
     height: 84px;
-    flex-direction: column;
   }
 
   .floppy {
@@ -425,15 +460,12 @@
 .modal[open] {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
-  margin: 50vh auto;
-  transform: translateY(-50%);
   max-width: 357px;
-  background-color: var(--bg-color);
   border: var(--border);
   padding: 30px;
   color: var(--accent-color);
+  background-color: var(--bg-color);
 }
 
 .modal[open]::backdrop {
@@ -452,27 +484,27 @@
 }
 
 .modal__box-text {
+  flex: 1;
   font-family: var(--accent-font);
-  font-size: 14px;
   font-weight: 400;
+  font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  flex: 1;
 }
 
 .modal__button {
-  border: var(--border);
-  background: var(--bg-color);
   width: 293px;
   height: 38px;
-  cursor: pointer;
+  border: var(--border);
   font-family: var(--accent-font);
   font-size: 14px;
+  background: var(--bg-color);
+  cursor: pointer;
 }
 
 .modal__button:focus-visible {
-  outline: none;
   box-shadow: 2px 2px var(--accent-color);
+  outline: none;
 }
 
 @media (width <= 400px) {
