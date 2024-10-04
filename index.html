@@ -23,8 +23,8 @@
   </head>
   <body class="page">
     <header class="header">
-      <h1 class="header__title">&lt;/HTML&gt;</h1>
-      <h2 class="header__subtitle">закрывающий тег</h2>
+      <a href="#" class="header__logo">&lt;/HTML&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -59,11 +59,11 @@
         </h2>
         <div class="card__box">
           <img
-            class="card__box-img press-start"
+            class="card__box-img filter-contrast"
             src="./images/sprint-0-pixelicious.png"
             alt="Мысли о нулевом спринте"
           />
-          <h3 class="card__box-tag">&lt;press start&gt;</h3>
+          <span class="card__box-tag">&lt;press start&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -76,9 +76,10 @@
             Это одновременно пугало и вдохновляло.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -107,7 +108,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -118,12 +119,12 @@
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__box">
           <img
-            class="card__box-img explore"
+            class="card__box-img filter-blur"
             src="./images/sprint-10-pixelicious.png"
             alt="Мысли о начале первого спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;explore&gt;</h3>
+          <span class="card__box-tag">&lt;explore&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -139,9 +140,10 @@
             но в то же время было жуть как интересно узнать, что дальше.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -170,7 +172,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -181,12 +183,12 @@
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__box">
           <img
-            class="card__box-img point-one"
+            class="card__box-img filter-sepia"
             src="./images/sprint-11-pixelicious.png"
             alt="Мысли о конце первого спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;point one&gt;</h3>
+          <span class="card__box-tag">&lt;point one&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -200,9 +202,10 @@
             начало, то и дело возникали новые открытия и новые вопросы.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -231,7 +234,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -242,12 +245,12 @@
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__box">
           <img
-            class="card__box-img curiosity"
+            class="card__box-img filter-opacity"
             src="./images/sprint-20-pixelicious.png"
             alt="Мысли о начале второго спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;curiosity&gt;</h3>
+          <span class="card__box-tag">&lt;curiosity&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -263,9 +266,10 @@
             мало.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -294,7 +298,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -305,12 +309,12 @@
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__box">
           <img
-            class="card__box-img support"
+            class="card__box-img filter-hue"
             src="./images/sprint-21-pixelicious.png"
             alt="Мысли о конце второго спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;support&gt;</h3>
+          <span class="card__box-tag">&lt;support&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -327,9 +331,10 @@
             на помощь приходили подсказки от наставника и коллег по учёбе.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -358,7 +363,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -369,12 +374,12 @@
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__box">
           <img
-            class="card__box-img plan-b"
+            class="card__box-img filter-saturate"
             src="./images/sprint-30-pixelicious.png"
             alt="Мысли о начале третьего спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;plan b&gt;</h3>
+          <span class="card__box-tag">&lt;plan b&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -389,9 +394,10 @@
             собой.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -420,7 +426,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -431,12 +437,12 @@
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__box">
           <img
-            class="card__box-img ready-steady"
+            class="card__box-img filter-invert"
             src="./images/sprint-31-pixelicious.png"
             alt="Мысли о конце третьего спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;ready steady&gt;</h3>
+          <span class="card__box-tag">&lt;ready steady&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -452,9 +458,10 @@
             решения задач, с которыми сталкивался ранее.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -483,7 +490,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -494,12 +501,12 @@
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__box">
           <img
-            class="card__box-img breathtaking"
+            class="card__box-img filter-brightness-contrast"
             src="./images/sprint-40-pixelicious.png"
             alt="Мысли в конце четвертого спринта"
             loading="lazy"
           />
-          <h3 class="card__box-tag">&lt;you're breathtaking&gt;</h3>
+          <span class="card__box-tag">&lt;you're breathtaking&gt;</span>
         </div>
         <div class="card__content">
           <p class="card__text">
@@ -517,9 +524,10 @@
             только с опытом, а это значит, всегда есть чему поучиться.
           </p>
           <div class="card__buttons">
-            <button class="card__icon-button">
+            <button class="card__icon-button" type="button">
               <svg
                 class="like-icon"
+                aria-hidden="true"
                 width="39"
                 height="36"
                 viewBox="0 0 39 36"
@@ -548,7 +556,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button">
+            <button class="card__like-button button" type="button">
               <span class="button__text">Like</span>
             </button>
           </div>
@@ -557,28 +565,27 @@
     </main>
 
     <button
-      class="save-button"
-      type="button"
+      class="save-button button"
+      type="submit"
       onclick="window['save'].showModal()"
       aria-controls="save"
     >
-      <svg class="floppy">
-        <use href="./svg/floppy.svg#floppy-21" class="floppy__img-s"></use>
-        <use href="./svg/floppy.svg#floppy-28" class="floppy__img-m"></use>
+      <svg class="floppy" viewBox="0 0 39 39">
+        <use href="./svg/floppy.svg#floppy"></use>
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
 
     <dialog class="modal" id="save">
       <div class="modal__box">
-        <svg class="floppy">
-          <use href="./svg/floppy.svg#floppy-40" class="floppy__img-l"></use>
+        <svg class="floppy" viewBox="0 0 39 39">
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <h2 class="modal__box-text">Вставьте дискету, чтобы продолжить</h2>
       </div>
       <button
-        class="modal__button"
-        type="button"
+        class="modal__button button"
+        type="submit"
         onclick="window['save'].close()"
       >
         ОК
