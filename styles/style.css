@@ -53,17 +53,10 @@
   justify-content: flex-end;
   align-items: center;
   width: clamp(375px, 75vi, 700px);
-  min-height: 368px;
   margin: 100px auto;
-  padding: 25px 0;
+  padding-top: clamp(7.375rem, 7.0229rem + 1.5023vw, 8.375rem);
   border: var(--border);
   background-color: var(--bg-color);
-}
-
-@media (width <= 400px) {
-  .header {
-    min-height: 327px;;
-  }
 }
 
 .header__logo {
@@ -83,7 +76,7 @@
 }
 
 .header__theme-menu {
-  padding: 25px 10px 0 25px;
+  padding: 25px 10px 25px 25px;
 }
 
 .theme-menu__list {
@@ -209,6 +202,10 @@
   flex-direction: column;
   gap: 26px;
   padding: 25px;
+}
+
+.card__text {
+  line-height: 21px;
 }
 
 .card__buttons {
